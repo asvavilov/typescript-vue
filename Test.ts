@@ -2,8 +2,20 @@ import { StringValidator } from "./lib/Validation";
 import { ZipCodeValidator } from "./lib/ZipCodeValidator";
 import { LettersOnlyValidator } from "./lib/LettersOnlyValidator";
 
-export default function Test()
+async function testAsyncAwait()
 {
+	let p: any = new Promise<string>(function (resolve: (value?: any) => void) {
+		setTimeout(function () {
+			resolve('promise result');
+		}, 1000);
+	});
+	return await p;
+}
+
+export default async function Test()
+{
+	console.log(await testAsyncAwait());
+
 	// Несколько тестовых примеров
 	let strings = ["Hello", "98052", "101"];
 

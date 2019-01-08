@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>And see in console!</h1>
-    <h2>Vue + RequireJS demo (jp-d)</h2>
+    <h2>Vue + RequireJS demo</h2>
     <ul>
       <li v-for="i in items" :key="i">
         {{i}}
